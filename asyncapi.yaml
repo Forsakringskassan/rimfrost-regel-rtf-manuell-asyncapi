@@ -5,34 +5,34 @@ info:
   description: Manuell regel för att kontrollera om en person har rätt till Vård av husdjur.
 
 channels:
-  vah.rtf.manuell.requests:
-    address: vah.rtf.manuell.requests
+  rtf.manuell.requests:
+    address: rtf.manuell.requests
     messages:
-      VahRtfManuellRequestMessage:
-        $ref: "#/components/messages/VahRtfManuellRequestMessage"
+      RtfManuellRequestMessage:
+        $ref: "#/components/messages/RtfManuellRequestMessage"
 
-  vah.rtf.manuell.responses:
-    address: vah.rtf.manuell.responses
+  rtf.manuell.responses:
+    address: rtf.manuell.responses
     messages:
-      VahRtfManuellResponseMessage:
-        $ref: "#/components/messages/VahRtfManuellResponseMessage"
+      RtfManuellResponseMessage:
+        $ref: "#/components/messages/RtfManuellResponseMessage"
 
 operations:
-  VahRtfManuellRequest:
+  RtfManuellRequest:
     action: receive
     summary: Tillämpar regeln och kontrollerar om personen har rätt till Vård av husdjur.
     channel:
-      $ref: "#/channels/vah.rtf.manuell.requests"
+      $ref: "#/channels/rtf.manuell.requests"
     reply:
       address:
         description: Resultatet skickas tillbaka till källan.
         location: "$message.header#/replyTo"
       channel:
-        $ref: "#/channels/vah.rtf.manuell.responses"
+        $ref: "#/channels/rtf.manuell.responses"
 
 components:
   schemas:
-    VahRtfManuellRequestMessageHeaders:
+    RtfManuellRequestMessageHeaders:
       type: object
       properties:
         replyTo:
@@ -42,9 +42,9 @@ components:
           type: string
           description: Unikt ID som kopplar ihop request & response
 
-    VahRtfManuellRequestMessageData:
+    RtfManuellRequestMessageData:
       type: object
-      title: VahRtfManuellRequestMessageData
+      title: RtfManuellRequestMessageData
       required:
         - kundbehovsflode_id
       properties:
@@ -52,16 +52,16 @@ components:
           type: string
           description: Kundbehovsflöde id
 
-    VahRtfManuellResponseMessageHeaders:
+    RtfManuellResponseMessageHeaders:
       type: object
       properties:
         correlationId:
           type: string
           description: Unikt ID som kopplar ihop request & response
 
-    VahRtfManuellResponseMessageData:
+    RtfManuellResponseMessageData:
       type: object
-      title: VahRtfManuellResponseMessageData
+      title: RtfManuellResponseMessageData
       required:
         - kundbehovsflode_id
         - result
@@ -74,33 +74,33 @@ components:
           description: Resultat av regeln
 
   messages:
-    VahRtfManuellRequestMessage:
+    RtfManuellRequestMessage:
       headers:
-        $ref: "#/components/schemas/VahRtfManuellRequestMessageHeaders"
+        $ref: "#/components/schemas/RtfManuellRequestMessageHeaders"
       payload:
-        title: VahRtfManuellRequestMessagePayload
+        title: RtfManuellRequestMessagePayload
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
-            title: VahRtfManuellRequestMessageData
+            title: RtfManuellRequestMessageData
             required:
               - data
             properties:
               data:
-                $ref: "#/components/schemas/VahRtfManuellRequestMessageData"
+                $ref: "#/components/schemas/RtfManuellRequestMessageData"
 
-    VahRtfManuellResponseMessage:
+    RtfManuellResponseMessage:
       headers:
-        $ref: "#/components/schemas/VahRtfManuellResponseMessageHeaders"
+        $ref: "#/components/schemas/RtfManuellResponseMessageHeaders"
       payload:
-        title: VahRtfManuellResponseMessagePayload
+        title: RtfManuellResponseMessagePayload
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
-            title: VahRtfManuellResponseMessageData
+            title: RtfManuellResponseMessageData
             required:
               - data
             properties:
               data:
-                $ref: "#/components/schemas/VahRtfManuellResponseMessageData"
+                $ref: "#/components/schemas/RtfManuellResponseMessageData"
 
