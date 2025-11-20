@@ -18,7 +18,7 @@ channels:
         $ref: "#/components/messages/VahRtfManuellResponseMessage"
 
 operations:
-  onVahRtfManuellRequest:
+  VahRtfManuellRequest:
     action: receive
     summary: Tillämpar regeln och kontrollerar om personen har rätt till Vård av husdjur.
     channel:
@@ -32,53 +32,6 @@ operations:
 
 components:
   schemas:
-    Parameterdata:
-      type: object
-      required:
-        - id
-      properties:
-        id:
-          type: string
-          description: Unikt ID som identifierar data objektet
-      additionalProperties: true
-      description: Parameterdata i valfritt format. Backend äger strukturen
-
-    Kundbehov:
-      type: object
-      required:
-        - id
-        - version
-      properties:
-        id:
-          type: string
-          description: Unikt ID som identifierar kundbehovet
-        version:
-          type: string
-          description: Versionen av kundbehovet
-
-    KundId:
-      type: object
-      properties:
-        personnummer:
-          $ref: '#/components/schemas/Personnummer'
-        organisationsnummer:
-          $ref: '#/components/schemas/Organisationsnummer'
-      oneOf:
-        - required:
-            - personnummer
-        - required:
-            - organisationsnummer
-
-    Personnummer:
-      type: string
-      description: Svenskt personnummer (12 siffror med bindestreck)
-      pattern: '^\d{8}-\d{4}$'
-
-    Organisationsnummer:
-      type: string
-      description: Svenskt organisationsnummer (10 siffror med bindestreck)
-      pattern: '^\d{6}-\d{4}$'
-
     VahRtfManuellRequestMessageHeaders:
       type: object
       properties:
@@ -91,23 +44,13 @@ components:
 
     VahRtfManuellRequestMessageData:
       type: object
+      title: VahRtfManuellRequestMessageData
       required:
-        - id
+        - kundbehovsflode_id
       properties:
-        id:
+        kundbehovsflode_id:
           type: string
-          description: Unikt ID som identifierar processinstansen
-        version:
-          type: string
-          description: Versionen av processflödet som har skickat requestet
-        kund_id:
-          type: object
-          description: Unik ID som identifierar kunden, vare sig person eller organisation.
-          $ref: '#/components/schemas/KundId'
-        parameterdata:
-          $ref: '#/components/schemas/Parameterdata'
-        kundbehov:
-          $ref: '#/components/schemas/Kundbehov'
+          description: Kundbehovsflöde id
 
     VahRtfManuellResponseMessageHeaders:
       type: object
@@ -118,47 +61,17 @@ components:
 
     VahRtfManuellResponseMessageData:
       type: object
+      title: VahRtfManuellResponseMessageData
       required:
-        - processId
-        - id
+        - kundbehovsflode_id
+        - result
       properties:
-        id:
+        kundbehovsflode_id:
           type: string
-          description: Unikt ID som identifierar regeln
-        version:
+          description: Kundbehovsflöde id
+        result:
           type: string
-          description: Versionen av regeln som har utförts
-        process_id:
-          type: string
-          description: Unikt ID som identifierar processinstansen
-        utforar_id:
-          type: string
-          description: Unikt ID som identifierar utföraren
-        utford_tid:
-          type: string
-          description: DateTime av när uppgiften utfördes i ISO 8601 format
-        status:
-          type: string
-          description: Status av uppgiften
-        fssa:
-          type: string
-          description: FSSÄ-information till kunden
-        regelutfall:
-          type: object
-          $ref: '#/components/schemas/Regelutfall'
-
-    Regelutfall:
-      type: object
-      required:
-        - typ
-        - varde
-      properties:
-        typ:
-          type: object
-          description: Typen av objekt som utfallet är
-        value:
-          type: string
-          description: Värdet av objektet som utfallet är av
+          description: Resultat av regeln
 
   messages:
     VahRtfManuellRequestMessage:
@@ -169,11 +82,10 @@ components:
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
+            title: VahRtfManuellRequestMessageData
+            required:
+              - data
             properties:
-              type:
-                type: string
-                const: vah-rtf-manuell-requests
-                default: vah-rtf-manuell-requests
               data:
                 $ref: "#/components/schemas/VahRtfManuellRequestMessageData"
 
@@ -185,11 +97,10 @@ components:
         allOf:
           - $ref: "kogito-cloudevent.yaml#/components/schemas/KogitoCloudEvent"
           - type: object
+            title: VahRtfManuellResponseMessageData
+            required:
+              - data
             properties:
-              type:
-                type: string
-                const: vah-rtf-manuell-responses
-                default: vah-rtf-manuell-responses
               data:
                 $ref: "#/components/schemas/VahRtfManuellResponseMessageData"
 

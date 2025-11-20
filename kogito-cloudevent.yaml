@@ -6,6 +6,7 @@ components:
     KogitoCloudEvent:
       type: object
       description: Base CloudEvent envelope including Kogito extensions
+      title: KogitoCloudEvent
       properties:
         specversion:
           title: specVersion
