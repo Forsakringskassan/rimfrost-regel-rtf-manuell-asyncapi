@@ -1,3 +1,24 @@
+## 0.3.0 (2025-11-20)
+
+### Features
+
+-  add static topic to asyncapi ([276b6](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/276b60b3a800c4f) David Söderberg)  
+
+### Bug Fixes
+
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.1 ([dcef9](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/dcef9e4e0346df3) renovate[bot])  
+
+### Dependency updates
+
+- update gradle to v9.2.0 ([c44e5](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/c44e5f27b76ff23) renovate[bot])  
+### Other changes
+
+**Renaming VahRtf -> Rtf**
+
+
+[21b47](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/21b472eed1cffa5) Ulf Slunga *2025-11-20 13:04:56*
+
+
 ## Unreleased ()
 
 ### Other changes
