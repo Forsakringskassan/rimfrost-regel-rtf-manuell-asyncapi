@@ -1,3 +1,10 @@
+## 0.3.1 (2025-11-21)
+
+### Bug Fixes
+
+-  Group se.fk.rimfrost.regel.rtf.manuell ([f2388](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/f2388612033f694) Ulf Slunga)  
+-  Enum för resultatet. kundbehovsflode_id -> kundbehovsflodeId ([c2135](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/c21351ce5632a11) Ulf Slunga)  
+
 ## 0.3.0 (2025-11-20)
 
 ### Features
