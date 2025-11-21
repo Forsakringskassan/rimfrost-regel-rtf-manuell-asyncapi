@@ -46,9 +46,9 @@ components:
       type: object
       title: RtfManuellRequestMessageData
       required:
-        - kundbehovsflode_id
+        - kundbehovsflodeId
       properties:
-        kundbehovsflode_id:
+        kundbehovsflodeId:
           type: string
           description: Kundbehovsflöde id
 
@@ -63,15 +63,19 @@ components:
       type: object
       title: RtfManuellResponseMessageData
       required:
-        - kundbehovsflode_id
-        - result
+        - kundbehovsflodeId
+        - rattTillForsakring
       properties:
-        kundbehovsflode_id:
+        kundbehovsflodeId:
           type: string
           description: Kundbehovsflöde id
-        result:
+        rattTillForsakring:
+          title: rattTillForsakring
           type: string
-          description: Resultat av regeln
+          description: Utfall av regel, om personen har rätt till försäkring
+          enum:
+            - Ja
+            - Nej
 
   messages:
     RtfManuellRequestMessage:
