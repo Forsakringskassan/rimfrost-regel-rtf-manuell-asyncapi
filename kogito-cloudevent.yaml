@@ -14,6 +14,7 @@ components:
           enum: [ "1.0" ]
         id:
           type: string
+          format: uuid
           description: CloudEvent unique identifier
         source:
           type: string
@@ -27,6 +28,7 @@ components:
           description: Time when the event occurred
         kogitoparentprociid:
           type: string
+          format: uuid
           description: Parent process instance ID
         kogitorootprocid:
           type: string
@@ -38,6 +40,7 @@ components:
           enum: [ "BPMN" ]
         kogitoprocinstanceid:
           type: string
+          format: uuid
           description: Process instance ID
         kogitoprocist:
           type: string
@@ -47,12 +50,14 @@ components:
           description: Process version
         kogitorootprociid:
           type: string
+          format: uuid
           description: Active Kogito addons for the process
         kogitoprocid:
           type: string
           description: Process id
         kogitoprocrefid:
           type: string
+          format: uuid
           description: Process Reference ID   
         data:
           type: object
