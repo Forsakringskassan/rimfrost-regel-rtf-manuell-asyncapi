@@ -1,3 +1,13 @@
+## 0.3.2 (2025-11-25)
+
+### Bug Fixes
+
+-  fix uuid in cloudevent yaml ([76c0e](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/76c0e60eb13d6d1) Nils Elveros)  
+-  format id as uuid ([b4b4e](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/b4b4e5504bfb889) Nils Elveros)  
+
+### Dependency updates
+
+- update gradle to v9.2.1 ([cc8c7](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/cc8c7eade726a63) renovate[bot])  
 ## 0.3.1 (2025-11-21)
 
 ### Bug Fixes
