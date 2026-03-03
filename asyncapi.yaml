@@ -47,12 +47,12 @@ components:
       type: object
       title: RtfManuellRequestMessageData
       required:
-        - kundbehovsflodeId
+        - handlaggningId
       properties:
-        kundbehovsflodeId:
+        handlaggningId:
           type: string
           format: uuid
-          description: Kundbehovsflöde id
+          description: Unikt ID som identifierar handläggningsärendet
 
     RtfManuellResponseMessageHeaders:
       type: object
@@ -66,13 +66,13 @@ components:
       type: object
       title: RtfManuellResponseMessageData
       required:
-        - kundbehovsflodeId
+        - handlaggningId
         - rattTillForsakring
       properties:
-        kundbehovsflodeId:
+        handlaggningId:
           type: string
           format: uuid
-          description: Kundbehovsflöde id
+          description: Unikt ID som identifierar handläggningsärendet
         rattTillForsakring:
           title: rattTillForsakring
           type: string
