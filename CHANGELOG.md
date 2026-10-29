@@ -1,3 +1,29 @@
+## 0.3.3 (2026-10-29)
+
+### Bug Fixes
+
+-  Replace github workflows ([0a7f9](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/0a7f94c88cd5db0) Lars Persson)  
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.3 ([bf427](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/bf427884c819d70) renovate[bot])  
+-  **deps**  update dependency se.fk.gradle:gradle-conventions to v1.18.2 ([ce4b3](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/ce4b30244958232) renovate[bot])  
+-  Rename kundbehovsflode to handlaggning ([4cd0e](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/4cd0ef65a7b99bc) Lars Persson)  
+
+### Dependency updates
+
+- update gradle to v9.8.1 ([2b931](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/2b9315fbff9c220) renovate[bot])  
+- update forsakringskassan/.github digest to cbd74f1 ([c9155](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/c9155074ab23a98) renovate[bot])  
+- update gradle to v9.8.0 ([9d87b](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/9d87b48e42c7ea8) renovate[bot])  
+- update forsakringskassan/.github digest to bfb01f7 ([14eb0](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/14eb065a30cd91e) renovate[bot])  
+- pin forsakringskassan/.github action to d1349e6 ([9ecda](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/9ecda115e77665e) renovate[bot])  
+- update gradle to v9.7.1 ([fdbb7](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/fdbb7289a97620c) renovate[bot])  
+- update gradle to v9.7.0 ([4a6d6](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/4a6d62f842569d2) renovate[bot])  
+- update gradle to v9.6.1 ([61a04](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/61a04ccda094166) renovate[bot])  
+- update gradle to v9.6.0 ([90e0d](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/90e0d765d9e6ede) renovate[bot])  
+- update gradle to v9.5.1 ([e1ffd](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/e1ffd304f2e201d) renovate[bot])  
+- update gradle to v9.5.0 ([979ba](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/979ba10160fd7b6) renovate[bot])  
+- update gradle to v9.4.1 ([9d876](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/9d8769c050fb68e) renovate[bot])  
+- update gradle to v9.4.0 ([214d7](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/214d7d7ebc6fee4) renovate[bot])  
+- update gradle to v9.3.1 ([24a15](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/24a15d2511e0cd0) renovate[bot])  
+- update gradle to v9.3.0 ([73c47](https://github.com/Forsakringskassan/rimfrost-regel-rtf-manuell-asyncapi/commit/73c4750e547d4bc) renovate[bot])  
 ## 0.3.2 (2025-11-25)
 
 ### Bug Fixes
